@@ -1,0 +1,29 @@
+<!DOCTYPE 5>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Google maps API v3</title>
+  <script type="text/javascript" src="build/build.js"></script>
+</head>
+<body>
+  <div id="map" style="height: 100%"></div>
+  <script>
+    var load = require('google-maps')({
+      libraries: ['places', 'drawing'],
+      protocol: 'https'
+    })
+
+    load(function (err, gmaps) {
+      if (err) return console.log(err)
+      var map = new gmaps.Map(document.getElementById('map'), {
+        center: new gmaps.LatLng(55.8, 37.6),
+        zoom: 10,
+        mapTypeId: gmaps.MapTypeId.ROADMAP
+      })
+
+      var dm = new gmaps.drawing.DrawingManager()
+      dm.setMap(map)
+    })
+  </script>
+</body>
+</html>
