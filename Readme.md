@@ -6,7 +6,7 @@ Load google maps from JavaScript
 ## Installation
 
 ```
-$ component install eldargab/google-maps-v3
+$ component install eldargab/google-maps
 ```
 
 ## API
